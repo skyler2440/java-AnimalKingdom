@@ -1,5 +1,7 @@
 package com.skyler;
 
+import java.util.ArrayList;
+
 public class Main
 {
 
@@ -7,7 +9,7 @@ public class Main
     {
         //Create mammals
         Mammals panda = new Mammals("Panda", 1869);
-        Mammals Zebra = new Mammals("Zebra", 1778);
+        Mammals zebra = new Mammals("Zebra", 1778);
         Mammals koala = new Mammals("Koala", 1816);
         Mammals sloth = new Mammals("Sloth", 1804);
         Mammals armadillo = new Mammals("Armadillo", 1758);
@@ -26,6 +28,25 @@ public class Main
         Fish catfish = new Fish("Catfish", 1817);
         Fish perch = new Fish("Perch", 1758);
 
-        System.out.println(salmon.getId() + pigeon.breathe());
+        ArrayList<AbstractAnimal> myList = new ArrayList<>();
+        myList.add(panda);
+        myList.add(zebra);
+        myList.add(koala);
+        myList.add(sloth);
+        myList.add(armadillo);
+        myList.add(raccoon);
+        myList.add(bigfoot);
+        myList.add(pigeon);
+        myList.add(peacock);
+        myList.add(toucan);
+        myList.add(parrot);
+        myList.add(swan);
+        myList.add(salmon);
+        myList.add(catfish);
+        myList.add(perch);
+
+
+
+        System.out.println(myList.toString());
     }
 }

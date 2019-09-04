@@ -1,52 +1,33 @@
 package com.skyler;
 
-public class Fish implements Animal
+public class Fish extends AbstractAnimal
 {
-    private static int maxId;
-    private int id;
-    private int yearNamed;
-    private String name;
 
     public Fish(String name, int yearNamed) {
-        maxId++;
-        id = maxId;
-        this.yearNamed = yearNamed;
-        this.name = name;
+        super(name, yearNamed);
     }
 
-    public int getId() {
-        return id;
-    }
-
+    @Override
     public String getName() {
-        return name;
+        return null;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setYearNamed(int yearNamed) {
-        this.yearNamed = yearNamed;
-    }
-
+    @Override
     public int getYearNamed() {
-        return yearNamed;
+        return 0;
     }
 
     @Override
-    public String move() {
-        return "Swim";
+    public int getId() {
+        return 0;
     }
 
     @Override
-    public String breathe() {
-        return "Gills";
-    }
-
-    @Override
-    public String reproduce() {
-        return "Eggs";
-
+    public String toString() {
+        return "\n Fish{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", yearNamed=" + yearNamed +
+                '}';
     }
 }
