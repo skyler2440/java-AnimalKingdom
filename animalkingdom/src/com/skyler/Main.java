@@ -28,6 +28,7 @@ public class Main
         Fish catfish = new Fish("Catfish", 1817);
         Fish perch = new Fish("Perch", 1758);
 
+        //Create Array List and Add Animals
         ArrayList<AbstractAnimal> myList = new ArrayList<>();
         myList.add(panda);
         myList.add(zebra);
@@ -44,9 +45,8 @@ public class Main
         myList.add(salmon);
         myList.add(catfish);
         myList.add(perch);
-
-
-
+        //Print Array List to test
         System.out.println(myList.toString());
+        
     }
 }

@@ -6,6 +6,9 @@ public abstract class AbstractAnimal
     int id;
     String name;
     int yearNamed;
+    String move;
+    String breathe;
+    String reproduce;
 
 
     public AbstractAnimal(String name, int yearNamed) {
@@ -21,5 +24,8 @@ public abstract class AbstractAnimal
     public abstract String getName();
     public abstract int getYearNamed();
     public abstract int getId();
+    public abstract String getMove();
+    public abstract String getBreathe();
+    public abstract String getReproduce();
 
 }

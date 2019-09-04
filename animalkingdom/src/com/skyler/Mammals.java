@@ -6,6 +6,9 @@ public class Mammals extends AbstractAnimal {
 
     public Mammals(String name, int yearNamed) {
         super(name, yearNamed);
+        reproduce = "Live Birth";
+        move = "Walk";
+        breathe = "Lungs";
     }
 
     @Override
@@ -24,11 +27,29 @@ public class Mammals extends AbstractAnimal {
     }
 
     @Override
+    public String getMove() {
+        return "Walk";
+    }
+
+    @Override
+    public String getBreathe() {
+        return "Lungs";
+    }
+
+    @Override
+    public String getReproduce() {
+        return "Live Birth";
+    }
+
+    @Override
     public String toString() {
         return "\n Mammals{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", yearNamed=" + yearNamed +
+                ", move='" + move + '\'' +
+                ", breathe='" + breathe + '\'' +
+                ", reproduce='" + reproduce + '\'' +
                 '}';
     }
 }
