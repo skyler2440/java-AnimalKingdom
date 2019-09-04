@@ -1,14 +1,15 @@
 package com.skyler;
 
+//Birds Class
 public class Birds extends AbstractAnimal {
-
+//Constructor
     public Birds(String name, int yearNamed) {
         super(name, yearNamed);
         move = "Fly";
         breathe = "Lungs";
         reproduce = "Eggs";
     }
-
+//Needed getters for birds class
     @Override
     public String getName() {
         return name;

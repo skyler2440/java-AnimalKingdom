@@ -60,28 +60,32 @@ public class Main
         System.out.println(myList.toString());
         System.out.println();
         //List animals by year named
-        System.out.println("*** Animals by year named ***");
+        System.out.println("\n*** Animals by year named ***");
         myList.sort((y1,y2) -> y2.getYearNamed() - y1.getYearNamed());
         myList.forEach((a) -> System.out.println(a));
         //Alphabetical
-        System.out.println("*** Animals by ABC ***");
+        System.out.println("\n*** Animals by ABC ***");
         myList.sort((y1, y2) -> y1.getName().compareToIgnoreCase(y2.getName()));
         myList.forEach((a) -> System.out.println(a));
         //Movement
-        System.out.println("*** Animals by Movement ***");
+        System.out.println("\n*** Animals by Movement ***");
         myList.sort((y1, y2) -> y1.getMove().compareToIgnoreCase(y2.getMove()));
         myList.forEach((a) -> System.out.println(a));
         //Breathe With Lungs
-        System.out.println("*** Animals that breathe with lungs ***");
+        System.out.println("\n*** Animals that breathe with lungs ***");
         printAnimals(myList, a -> a.getBreathe() == "Lungs");
-        System.out.println("*** Animals that breathe with lungs and named in 1758 ***");
+        //breathe with lungs and named in 1758
+        System.out.println("\n*** Animals that breathe with lungs and named in 1758 ***");
         printAnimals(myList, a -> a.getBreathe() == "Lungs" && a.getYearNamed() == 1758);
-        System.out.println("*** Animals that breathe with lungs and lay eggs ***");
+        //breathe with lungs and lay eggs
+        System.out.println("\n*** Animals that breathe with lungs and lay eggs ***");
         printAnimals(myList, a -> a.getBreathe() == "Lungs" && a.getReproduce() == "Eggs");
-        System.out.println("*** Alphabetical named in 1758 ***");
+        //named in 1758
+        System.out.println("\n*** Alphabetical named in 1758 ***");
         myList.sort((y1, y2) -> y1.getName().compareToIgnoreCase(y2.getName()));
         printAnimals(myList, a -> a.getYearNamed() == 1758);
-        System.out.println("*** STRETCH ***");
+        //STRETCH
+        System.out.println("\n*** STRETCH ***");
         myList.sort((y1, y2) -> y1.getName().compareToIgnoreCase(y2.getName()));
         printAnimals(myList, a -> a.getReproduce() == "Live Births");
 

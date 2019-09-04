@@ -1,16 +1,16 @@
 package com.skyler;
 
-
+//Create Mammal Class
 public class Mammals extends AbstractAnimal {
 
-
+//Constructor
     public Mammals(String name, int yearNamed) {
         super(name, yearNamed);
         reproduce = "Live Births";
         move = "Walk";
         breathe = "Lungs";
     }
-
+//Needed getters for mammal classes
     @Override
     public String getName() {
         return name;
