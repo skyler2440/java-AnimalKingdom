@@ -11,32 +11,32 @@ public class Birds extends AbstractAnimal {
 
     @Override
     public String getName() {
-        return null;
+        return name;
     }
 
     @Override
     public int getYearNamed() {
-        return 0;
+        return yearNamed;
     }
 
     @Override
     public int getId() {
-        return 0;
+        return id;
     }
 
     @Override
     public String getMove() {
-        return "Fly";
+        return move;
     }
 
     @Override
     public String getBreathe() {
-        return "Lungs";
+        return breathe;
     }
 
     @Override
     public String getReproduce() {
-        return "Eggs";
+        return reproduce;
     }
 
     @Override

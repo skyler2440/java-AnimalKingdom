@@ -1,9 +1,19 @@
 package com.skyler;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Main
 {
+    public static void printAnimals(ArrayList<AbstractAnimal> animals, CheckAnimal tester)
+    {
+        for (AbstractAnimal a: animals)
+        {
+            if (tester.test(a))
+            {
+                System.out.println("The " + a.getName()+" breathes with "+a.getBreathe()+", reproduces using "+a.getReproduce()+", and was named in the year "+a.getYearNamed() + ".");
+            }
+        }
+    }
 
     public static void main(String[] args)
     {
@@ -46,7 +56,35 @@ public class Main
         myList.add(catfish);
         myList.add(perch);
         //Print Array List to test
+        System.out.println("*** Full Array List ***");
         System.out.println(myList.toString());
-        
+        System.out.println();
+        //List animals by year named
+        System.out.println("*** Animals by year named ***");
+        myList.sort((y1,y2) -> y2.getYearNamed() - y1.getYearNamed());
+        myList.forEach((a) -> System.out.println(a));
+        //Alphabetical
+        System.out.println("*** Animals by ABC ***");
+        myList.sort((y1, y2) -> y1.getName().compareToIgnoreCase(y2.getName()));
+        myList.forEach((a) -> System.out.println(a));
+        //Movement
+        System.out.println("*** Animals by Movement ***");
+        myList.sort((y1, y2) -> y1.getMove().compareToIgnoreCase(y2.getMove()));
+        myList.forEach((a) -> System.out.println(a));
+        //Breathe With Lungs
+        System.out.println("*** Animals that breathe with lungs ***");
+        printAnimals(myList, a -> a.getBreathe() == "Lungs");
+        System.out.println("*** Animals that breathe with lungs and named in 1758 ***");
+        printAnimals(myList, a -> a.getBreathe() == "Lungs" && a.getYearNamed() == 1758);
+        System.out.println("*** Animals that breathe with lungs and lay eggs ***");
+        printAnimals(myList, a -> a.getBreathe() == "Lungs" && a.getReproduce() == "Eggs");
+        System.out.println("*** Alphabetical named in 1758 ***");
+        myList.sort((y1, y2) -> y1.getName().compareToIgnoreCase(y2.getName()));
+        printAnimals(myList, a -> a.getYearNamed() == 1758);
+        System.out.println("*** STRETCH ***");
+        myList.sort((y1, y2) -> y1.getName().compareToIgnoreCase(y2.getName()));
+        printAnimals(myList, a -> a.getReproduce() == "Live Births");
+
+
     }
 }

@@ -6,7 +6,7 @@ public class Mammals extends AbstractAnimal {
 
     public Mammals(String name, int yearNamed) {
         super(name, yearNamed);
-        reproduce = "Live Birth";
+        reproduce = "Live Births";
         move = "Walk";
         breathe = "Lungs";
     }
@@ -28,17 +28,17 @@ public class Mammals extends AbstractAnimal {
 
     @Override
     public String getMove() {
-        return "Walk";
+        return move;
     }
 
     @Override
     public String getBreathe() {
-        return "Lungs";
+        return breathe;
     }
 
     @Override
     public String getReproduce() {
-        return "Live Birth";
+        return reproduce;
     }
 
     @Override
